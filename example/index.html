@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+	  <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Daniel Magyar">
+        <title>Test Project</title>
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Angular -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-route.js"></script>
+        <script src="js/controller.js"></script>
+        
+        <style>
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+        </style>
+    </head>
+    <body ng-app="TestProject">
+        <table>
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Location</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                </tr>
+            </thead>
+            <tbody ng-controller="index">
+                <tr ng-repeat="item in projects">
+                    <td>
+                        {{ item.Title }}
+                    </td>
+                    <td>
+                        {{ item.Location }}
+                    </td>
+                    <td>
+                        {{ item.StartDate }}
+                    </td>
+                    <td>
+                        {{ item.EndDate }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
